@@ -9,11 +9,11 @@ use App\DatabaseModel\Model;
 
 class Controller extends Model
 {
-//    public function getData()
-//    {
-//        $info = $this->findInfo();
-//        foreach ($info as $row) {
-//            echo $row['sku'] . "<br>" . $row['name'] . "<br>" . $row['price'] . "$" . "<br>" . $row['sizemb'] . "<br>" . $row['weightkg'] . "<br>";
-//        }
-//    }
+    public function getData()
+    {
+        $info = $this->findInfo();
+        foreach ($info as $row) {
+            echo $row['sku'] . "<br>" . $row['name'] . "<br>" . $row['price'] . "$" . "<br>" . $row['sizemb'] . "<br>" . $row['weightkg'] . "<br>";
+        }
+    }
 }

@@ -19,9 +19,9 @@
     <section class="content">
         <?php
         require __DIR__ . '/vendor/autoload.php';
-        use Backend\Backend\Database\Controller\Controller;
+        use \App\DatabaseController\Controller;
         $test = new Controller();
-        $janis = $test->getData();
+        $output = $test->getData();
         ?>
     </section>
     <footer><h3>Scandiweb Test assignment</h3>
