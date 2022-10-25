@@ -5,9 +5,9 @@ namespace App\DatabaseController;
 //Works with the include!
 //include '../DatabaseModel/Model.php';
 
-use App\DatabaseModel\Model;
+use App\DatabaseModel\User;
 
-class Controller extends Model
+class Controller extends User
 {
     public function getData()
     {

@@ -9,7 +9,7 @@ class Model
     public function __construct()
     {
         try {
-//            $this->pdo = new \PDO('mysql:host=....;dbname=products;charset=utf8mb4', '....', '....');
+//            $this->pdo = new \PDO('mysql:host=....;dbname=products;charset=utf8mb4', '', '');
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $this->pdo;
         } catch (\PDOException $ex) {
