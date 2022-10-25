@@ -1,0 +1,77 @@
+$zero: 0px;
+
+/*Styling reset for whole site*/
+* {
+  border: $zero;
+  margin: $zero;
+  padding: $zero;
+}
+
+/*Whole body styling*/
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Styling for header*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid lightgrey;
+}
+header > h1 {
+  padding: 20px;
+}
+
+/*Styling for header buttons "ADD", "MASS DELETE"*/
+
+.add-delete-button {
+  display: flex;
+  list-style: none;
+}
+#add-product-btn {
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  background-color: green;
+  cursor: pointer;
+}
+.add-product-button-wrapper {
+  padding: 20px 5px 20px 20px;
+}
+#delete-product-btn {
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  background-color: red;
+  cursor: pointer;
+}
+.delete-product-button-wrapper {
+  padding: 20px 20px 20px 0px;
+}
+
+/*Content styling*/
+
+.content {
+  flex: 1 0 auto;
+}
+
+/*Styling for footer*/
+
+footer {
+  flex-shrink: 0;
+  padding: 20px;
+  border-top: 2px solid lightgrey;
+  text-align: center;
+}
+footer > h3 {
+  font-weight: lighter;
+}

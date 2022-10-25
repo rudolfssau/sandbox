@@ -1,0 +1,17 @@
+{
+    "name": "rudolfssau/project",
+    "description": "Sandbox",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/Backend/Database"
+        }
+    },
+    "authors": [
+        {
+            "name": "rudolfssau"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    }
+}
