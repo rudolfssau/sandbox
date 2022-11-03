@@ -5,8 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="src/Stylesheet/product-list.css">
+    <link rel="stylesheet" href="src/Stylesheet/product-add.css">
     <title>Product Add</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 </head>
 <body>
 <header>
@@ -18,6 +20,12 @@
 </header>
 <section class="content">
     <form name="product_form" id="product_form" action="" method="post">
+        <?php
+        require __DIR__ . '/vendor/autoload.php';
+        use \App\Controller\Controller;
+        $send = new Controller();
+        $output = $send->sendData();
+        ?>
         <div><p>SKU</p><input id="product_sku" type="text" name="sku"></div>
         <div><p>Name</p><input id="product_name" type="text" name="name"></div>
         <div><p>Price ($)</p><input id="product_price" type="text" name="price"></div>
@@ -27,7 +35,7 @@
                 <option value="" name="one" id="one"></option>
                 <option value="dvd" name="dvd" class="required">DVD</option>
                 <option value="furniture" class="required">Furniture</option>
-                <option value="book" class="required">Book</option>
+                <option value="book" name="book" class="required">Book</option>
             </select>
         </section>
         <section>
@@ -50,8 +58,5 @@
 </section>
 <footer><h3>Scandiweb Test assignment</h3></footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-<script src="Public/Functionality/dropdown.js"></script>
-<script src="Public/Functionality/validation.js"></script>
+<script src="src/Public/Functionality/functionality.js"></script>
 </html>

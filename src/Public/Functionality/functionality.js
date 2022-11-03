@@ -1,3 +1,9 @@
+$("#productType").change(function () {
+    $("#dvd").hide();
+    $("#furniture").hide();
+    $("#book").hide();
+    $("#"+$(this).val()).css({"display":"block"});
+})
 $(function() {
     $("form[name='product_form']").validate({
         rules: {
@@ -25,7 +31,7 @@ $(function() {
                     return $("#productType").val() == "furniture";
                 }
             },
-            weigthkg: {
+            weightkg: {
                 required: function () {
                     return $("#productType").val() == "book";
                 }
@@ -40,13 +46,8 @@ $(function() {
         errorPlacement: function () {
             return false;
         },
-        submitHandler: function (form) {
-            form.submit();
-        }
+        // submitHandler: function (form) {
+        //     form.submit();
+        // }
     });
 });
-
-
-// sku: $(document.getElementById("product_sku").style.borderColor = "red"),
-//     name: $(document.getElementById("product_name").style.borderColor = "red"),
-//     price: $(document.getElementById("product_price").style.borderColor = "red")

@@ -3,7 +3,7 @@
         'name' => 'rudolfssau/project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4f0cc5dd225cfb3083463f1ef320d7d5fc866226',
+        'reference' => 'e8375fa5c892c35f6d6f66b026cfcf253bbc1304',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'rudolfssau/project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4f0cc5dd225cfb3083463f1ef320d7d5fc866226',
+            'reference' => 'e8375fa5c892c35f6d6f66b026cfcf253bbc1304',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

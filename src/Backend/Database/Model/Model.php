@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DatabaseModel;
+namespace App\Model;
 use \PDO;
 
 class Model
@@ -9,7 +9,7 @@ class Model
     public function __construct()
     {
         try {
-//            $this->pdo = new \PDO('mysql:host=....;dbname=products;charset=utf8mb4', '', '');
+            $this->pdo = new \PDO('mysql:host=127.0.0.1;dbname=products;charset=utf8mb4', 'root', '1234');
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $this->pdo;
         } catch (\PDOException $ex) {
@@ -23,12 +23,14 @@ class Model
         $statement->execute($params);
         return $statement->fetchall(PDO::FETCH_ASSOC) ?: null;
     }
-}
-class User extends Model
-{
-    public function findInfo()
+    public function insert(string $sql)
     {
-        return $this->query("SELECT * FROM info");
+        $statement = $this->pdo->prepare($sql);
+        return $statement;
+    }
+    public function delete()
+    {
+
     }
 }
 

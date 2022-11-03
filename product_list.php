@@ -17,12 +17,18 @@
         </ul>
     </header>
     <section class="content">
-        <?php
-        require __DIR__ . '/vendor/autoload.php';
-        use \App\DatabaseController\Controller;
-        $test = new Controller();
-        $output = $test->getData();
-        ?>
+        <form action="" method="post">
+            <table>
+                <tbody>
+                    <?php
+                    require __DIR__ . '/vendor/autoload.php';
+                    use \App\Controller\Controller;
+                    $fetch = new Controller();
+                    $output = $fetch->getData();
+                    ?>
+                </tbody>
+            </table>
+        </form>
     </section>
     <footer><h3>Scandiweb Test assignment</h3>
     </footer>
